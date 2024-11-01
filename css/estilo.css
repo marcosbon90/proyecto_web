@@ -1,0 +1,439 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@1,600&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #1D0E0A;
+  font-family: "Crimson Text", serif;
+}
+
+main {
+  color: #F6CA98;
+  font-family: "Crimson Text", serif;
+}
+main p {
+  font-size: 120%;
+}
+
+.nv-color {
+  background-color: #533123;
+}
+.nv-color a {
+  color: #F6CA98;
+}
+
+.enc-border {
+  border: 1px solid #F6CA98;
+  border-radius: 3%;
+}
+
+.plan-negocio {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.p-plan {
+  font-size: 300%;
+}
+
+/*intro*/
+.intro {
+  display: grid;
+  margin-left: 20%;
+  margin-top: 3%;
+  grid-template-areas: "imagen texto";
+  grid-template-rows: 300px;
+  grid-template-columns: 40% 43%;
+}
+
+.im-grid {
+  grid-area: imagen;
+  width: 100%;
+  height: 100%;
+}
+
+.text-grid {
+  grid-area: texto;
+  font-size: 125%;
+  text-align: justify;
+  margin-top: 0%;
+  margin-left: 2%;
+}
+
+/*slogan*/
+.slogan {
+  display: flex;
+  width: 100%;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+
+.lg {
+  width: 10%;
+  height: auto;
+}
+
+.sl1, .sl2 {
+  font-size: 200%;
+  white-space: nowrap;
+}
+
+/*Index*/
+.index-grid {
+  display: grid;
+  width: 80%;
+  gap: 2%;
+  margin-left: 10%;
+  grid-template-areas: "1 2";
+  grid-template-columns: auto;
+  grid-template-rows: auto auto;
+}
+
+.card-index {
+  display: grid;
+  width: 100%;
+  grid-template-areas: "im1 text1";
+  grid-template-columns: 30% 70%;
+  grid-template-rows: 250px;
+}
+.card-index img {
+  grid-area: im1;
+  width: 100%;
+  height: 100%;
+}
+.card-index p {
+  grid-area: text1;
+  margin-top: 6%;
+  padding: 2%;
+}
+.card-index h3 {
+  grid-area: text1;
+  text-align: center;
+  font-size: 200%;
+}
+
+.quien {
+  grid-area: 1;
+}
+
+.obj {
+  grid-area: 2;
+}
+
+.links {
+  display: grid;
+  width: 100%;
+  margin-top: 4%;
+  gap: 2%;
+  grid-template-areas: "plan elaboracion estilos";
+  grid-template-rows: auto;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.card-links {
+  display: grid;
+  grid-template-areas: "titulo" "imagen1";
+  grid-template-rows: auto 350px;
+}
+.card-links h3 {
+  grid-area: titulo;
+  text-align: center;
+}
+.card-links img {
+  grid-area: imagen1;
+  width: 100%;
+  height: 100%;
+}
+
+.plan {
+  grid-area: plan;
+}
+
+.elabo {
+  grid-area: elaboracion;
+}
+
+.estil {
+  grid-area: estilos;
+}
+
+/*plan de inversion*/
+.plan-grid {
+  display: grid;
+  width: 100%;
+  grid-template-areas: "enc1 enc2 enc3 enc4 enc5";
+  grid-template-rows: auto;
+  grid-template-columns: repeat(5, 1fr);
+  text-align: start;
+  margin-top: 4%;
+  gap: 1%;
+}
+
+.card-plan {
+  display: grid;
+  grid-template-areas: "titulo" "imagen1";
+  grid-template-rows: auto auto;
+}
+.card-plan h3 {
+  font-size: 150%;
+  text-align: center;
+  color: #f2dd6c;
+}
+.card-plan p {
+  padding: 6%;
+}
+
+.enc1 {
+  grid-area: enc1;
+}
+
+.colab {
+  grid-area: enc2;
+}
+
+.enc2 {
+  grid-area: enc2;
+}
+
+.enc3 {
+  grid-area: enc3;
+}
+
+.enc4 {
+  grid-area: enc4;
+}
+
+.enc5 {
+  grid-area: enc5;
+}
+
+/*elaboración*/
+.elab {
+  display: grid;
+  width: 90%;
+  grid-template-areas: "enc12" "enc21" "enc22" "enc23" "enc24";
+  grid-template-rows: repeat(5, auto);
+  grid-template-columns: auto;
+  text-align: start;
+  margin-top: 4%;
+  gap: 2%;
+}
+
+.card-elab {
+  display: grid;
+  grid-template-areas: "imagen1 texto1";
+  grid-template-columns: 20% 80%;
+  grid-template-rows: 200px;
+}
+.card-elab h3 {
+  grid-area: texto1;
+  font-size: 2rem;
+  text-align: center;
+  margin-top: 0%;
+}
+.card-elab p {
+  margin-top: 4%;
+  margin-left: 2%;
+  grid-area: texto1;
+}
+.card-elab img {
+  grid-area: imagen1;
+  width: 100%;
+  height: 100%;
+}
+
+.molienda {
+  grid-area: enc12;
+}
+
+.macerado {
+  grid-area: enc21;
+}
+
+.coccion {
+  grid-area: enc22;
+}
+
+.maduracion {
+  grid-area: enc23;
+}
+
+.embote {
+  grid-area: enc24;
+}
+
+/*estilos*/
+.font {
+  font-family: "Crimson Text", serif;
+}
+
+.marg-top {
+  margin-top: 3%;
+}
+
+/*contacto*/
+.formulario {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  background-image: url(../imagenes/contacto.png);
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 30%;
+}
+
+label {
+  margin-bottom: 5px;
+  font-size: 18px;
+}
+
+input, textarea {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 20px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+textarea {
+  resize: vertical;
+  height: 100px;
+}
+
+/*footer*/
+footer {
+  display: flex;
+  width: 100%;
+  height: 50px;
+  margin-top: 10%;
+  background-color: #533123;
+  justify-content: space-around;
+}
+footer a {
+  width: 5%;
+  height: 50%;
+}
+footer img {
+  width: 60%;
+  margin-top: 3%;
+  height: auto;
+}
+
+.insta {
+  width: 50%;
+  margin-top: 10%;
+}
+
+/*responsive*/
+@media (max-width: 500px) {
+  .sl1, .sl2 {
+    font-size: 110%;
+  }
+  .lg {
+    width: 20%;
+  }
+  /*introducción*/
+  .text-grid {
+    font-size: 100%;
+  }
+  .intro {
+    margin-left: 5%;
+    margin-right: 5%;
+    grid-template-areas: "imagen" "texto";
+    grid-template-columns: auto;
+  }
+  .im-grid {
+    height: 95%;
+  }
+  .p-plan {
+    font-size: 240%;
+  }
+  /*Index*/
+  .index-grid {
+    grid-area: "1" "2";
+    grid-template-columns: 1fr;
+  }
+  .card-index {
+    grid-template-areas: "im1" "text1";
+    grid-template-columns: 1fr;
+  }
+  .card-index h3 {
+    font-size: 150%;
+  }
+  .card-index p {
+    margin-top: 10%;
+  }
+  .links {
+    grid-template-areas: "plan" "elaboracion" "estilos";
+    grid-template-columns: 1fr;
+    padding: 3%;
+  }
+  /*plan de inversión*/
+  .plan-grid {
+    grid-template-areas: "enc1" "enc2" "enc3" "enc4" "enc5";
+    grid-template-columns: 1fr;
+    padding: 3%;
+  }
+  .plan-grid h3 {
+    font-size: 130%;
+  }
+  .plan-grid p {
+    padding: 4%;
+  }
+  /*foooter*/
+  footer {
+    margin-top: 50%;
+    height: 30px;
+  }
+  footer a img {
+    width: 130%;
+  }
+  .insta {
+    width: 120%;
+  }
+  /*Elaboracion*/
+  .card-elab {
+    justify-items: center;
+    grid-template-areas: "imagen1" "texto1";
+    grid-template-columns: 1fr;
+    grid-template-rows: 200px;
+  }
+  .card-elab p {
+    margin-top: 15%;
+    margin-left: 4%;
+  }
+  .card-elab img {
+    width: 100%;
+    min-height: 100%;
+    margin-left: 5%;
+  }
+  .Planresp {
+    margin-top: 100%;
+  }
+  /*contacto*/
+  .contactr {
+    font-size: 180%;
+  }
+  form {
+    max-width: 80%;
+  }
+}
+
+/*# sourceMappingURL=estilo.css.map */

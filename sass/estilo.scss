@@ -1,36 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@1,600&display=swap');
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+@use "genericas";
+@use "variables";
 
-body{
-    background-color: #1D0E0A;
-    font-family: 'Crimson Text', serif;
-     
-}
-main a{
-    text-decoration: none;
-    color: #F6CA98;
-
-
-}
-
- main{ 
-    color: #F6CA98;
-    font-family: "Crimson Text", serif ;
-}
-main p{
-    font-size: 120%;
-}
-.nv-color{
-    background-color: #533123;
-}
-.nv-color a{
-    color: #F6CA98;
-}
-/*-----------------------slogan---------------*/
+/*slogan*/
 .slogan{
     display: flex;
     width: 100%; 
@@ -51,46 +22,8 @@ main p{
     
 
 }
-/*------------------------genericas-----------------*/
-.plan-negocio{
-    display: flex;
-    width: 100%; 
-    justify-content: center;
-    align-items: center;     
-    
-}
-.p-plan{
-    font-size: 300%;
-}
-.enc-border{
-    border: 1px solid #F6CA98;
-    border-radius: 3%;
 
-}
-/*--------------introducción html-----------*/
-.intro{
-    display: grid;
-    margin-left: 20%;
-    margin-top: 3%;
-    grid-template-areas: 
-    "imagen texto";
-    grid-template-rows: 300px;
-    grid-template-columns: 40% 43%;
-}
-
-.im-grid{
-    grid-area: imagen;
-    width: 100%;
-    height: 100%;
-}
-.text-grid{
-    grid-area: texto;
-    font-size: 125%;
-    text-align: justify;
-    margin-top: 0%;
-    margin-left:2%;    
-}
-/*----------------------index--------------*/
+/*Index*/
 .index-grid{
     display: grid;
     width: 80%;
@@ -109,22 +42,21 @@ main p{
     "im1 text1";
     grid-template-columns: 30% 70%;
     grid-template-rows: 250px;
+    img{
+        @include variables.img-card(im1)
+        
+    }
+    p{
+        grid-area: text1;
+        margin-top: 6%;
+        padding: 2%;
+    }
+    h3{
+        grid-area: text1;
+        text-align: center;
+        font-size: 200%;
+    }
 
-}
-.card-index img{
-    grid-area: im1;
-    width: 100%;
-    height: 100%;
-}
-.card-index p{
-    grid-area: text1;
-    margin-top: 6%;
-    padding: 2%;
-}
-.card-index h3{
-    grid-area: text1;
-    text-align: center;
-    font-size: 200%;
 }
 .quien{
     grid-area: 1;
@@ -144,20 +76,14 @@ main p{
     grid-template-columns: repeat(3, 1fr);    
 }
 .card-links{
-    display: grid;
-    grid-template-areas: 
-    "titulo"
-    "imagen1";
-    grid-template-rows: auto 350px;
-}
-.card-links h3{
-    grid-area: titulo;
-    text-align: center;
-}
-.card-links img{
-    grid-area: imagen1;
-    width: 100%;
-    height: 100%;
+    @include variables.card(auto, 350px);
+    h3{
+        grid-area: titulo;
+        text-align: center;
+    }
+    img{
+        @include variables.img-card(imagen1)
+    }
 }
 .plan{
     grid-area: plan;
@@ -171,7 +97,7 @@ main p{
 }
 
 
-/*------------------------plan de inversion----------------*/
+/*plan de inversion*/
 .plan-grid{
     display: grid;
     width: 100%;
@@ -184,20 +110,16 @@ main p{
     gap: 1%;
 }
 .card-plan{
-    display: grid;
-    grid-template-areas: 
-    "encabezado"
-    "texto";
-    grid-template-rows: auto auto;
-}
-
-.card-plan h3{
-    font-size: 180%;
-    text-align: center;
-    margin-top: 0%; 
-}
-.card-plan p{
-    padding: 6%;
+    @include variables.card(auto, auto);
+    h3{
+        font-size: 150%;
+        text-align: center;
+        color: variables.$titulo;
+    }
+    p{
+        padding: 6%;
+    }
+    
 }
 .enc1{
     grid-area: enc1;
@@ -217,7 +139,7 @@ main p{
 .enc5{
     grid-area: enc5;
 }
-/*--------------------elaboración*-------------*/
+/*elaboración*/
 .elab{
     display: grid;
     width: 90%;
@@ -239,24 +161,20 @@ main p{
     "imagen1 texto1";
     grid-template-columns: 20% 80%;
     grid-template-rows: 200px;
-}
-
-.card-elab h3{
-    grid-area: texto1;
-    font-size: 2rem;
-    text-align: center;
-    margin-top: 0%; 
-}
-.card-elab p{
-    margin-top: 4%;
-    margin-left: 2%;
-    grid-area: texto1 ;
-
-}
-.card-elab img{
-    grid-area: imagen1;
-    width: 100%;
-    height: 100%;
+    h3{
+        grid-area: texto1;
+        font-size: 2rem;
+        text-align: center;
+        margin-top: 0%
+    }
+    p{
+        margin-top: 4%;
+        margin-left: 2%;
+        grid-area: texto1 ;
+    }
+    img{
+        @include variables.img-card(imagen1);
+    }
 }
 .molienda{
     grid-area: enc12;
@@ -273,7 +191,7 @@ main p{
 .embote{
     grid-area: enc24;
 }
-/*--------------------Estilos-----*/
+/*estilos*/
 .font{
     font-family: "Crimson Text", serif;
 
@@ -281,7 +199,7 @@ main p{
 .marg-top{
     margin-top: 3%;
 }
-/*-----------------contacto--------------------*/
+/*contacto*/
 .formulario {
     display: flex;
     justify-content: center; 
@@ -317,37 +235,31 @@ input, textarea {
 
 textarea {
     resize: vertical; 
-    height: 100px; 
+    height: 100px;     
 }
-
-/*-------------------footer------------*/
+/*footer*/
 footer{
     display: flex;
     width: 100%;
     height: 50px;
     margin-top: 10%;
-    background-color: #533123;
+    background-color: variables.$fondo;
     justify-content: space-around;
-}
-footer a {
-    width: 5%;
-    height: 50%s;
-}
-footer a img{
-    width: 60%;
-    margin-top: 3%;
-    height: auto;
-
+    a{
+        width: 5%;
+        height: 50%; 
+    }
+    img{
+        width: 60%;
+        margin-top: 3%;
+        height: auto;
+    }
 }
 .insta{
     width: 50%;
     margin-top: 10%;
 }
-
-
-
-
-/*--------------------------responsive-------------*/
+/*responsive*/
 @media (max-width: 500px){
     .sl1, .sl2{        
         font-size: 110%;
@@ -386,12 +298,13 @@ footer a img{
         "im1"
         "text1";
         grid-template-columns: 1fr;
-    }
-    .card-index h3{
-        font-size: 150%;
-    }
-    .card-index p{
-        margin-top: 10%;
+        h3{
+            font-size: 150%;
+        }
+        p{
+            margin-top: 10%;
+        }
+        
     }
     .links{
 
@@ -414,12 +327,12 @@ footer a img{
         "enc5";
         grid-template-columns: 1fr;
         padding: 3%;
-    }   
-    .card-plan h3{
-        font-size: 90%;
-    }
-    .card-plan p{
-        padding: 4%;
+        h3{
+            font-size: 130%;
+        }
+        p{
+            padding: 4%;
+        }
     }
     /*foooter*/
     footer{
@@ -431,6 +344,34 @@ footer a img{
     }
     .insta{
         width: 120%;
+    }
+    /*Elaboracion*/
+    .card-elab{
+        justify-items: center;
+        grid-template-areas: 
+        "imagen1"
+        "texto1";
+        grid-template-columns: 1fr;
+        grid-template-rows: 200px;
+        p{
+            margin-top: 15%;
+            margin-left: 4%;
+        }
+        img{
+            width:100%;
+            min-height: 100%;
+            margin-left: 5%;
+        }
+    }
+    .Planresp{
+        margin-top: 100%;
+    }
+    /*contacto*/
+    .contactr {
+        font-size: 180%;
+    }
+    form{
+        max-width: 80%;
     }
 
 }

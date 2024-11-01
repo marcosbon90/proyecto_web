@@ -1,0 +1,14 @@
+@mixin img-card($grid-area){
+    grid-area: $grid-area;
+    width: 100%;
+    height: 100%;
+}
+@mixin card($row1, $row2){
+    display: grid;
+    grid-template-areas: 
+    "titulo"
+    "imagen1";
+    grid-template-rows: $row1 $row2;
+}
+$fondo: #533123;
+$titulo:#f2dd6c;

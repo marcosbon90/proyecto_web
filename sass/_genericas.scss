@@ -1,0 +1,63 @@
+@use "variables";
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@1,600&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #1D0E0A;
+    font-family: 'Crimson Text', serif;
+     
+}
+main{ 
+    color: #F6CA98;
+    font-family: "Crimson Text", serif;
+    p{
+        font-size: 120%;
+    }
+}
+.nv-color{
+    background-color: variables.$fondo;
+    a{
+        color: #F6CA98;
+    }
+}
+.enc-border{
+    border: 1px solid #F6CA98;
+    border-radius: 3%;
+
+}
+.plan-negocio{
+    display: flex;
+    width: 100%; 
+    justify-content: center;
+    align-items: center;     
+    
+}
+.p-plan{
+    font-size: 300%;
+}
+/*intro*/
+.intro{
+    display: grid;
+    margin-left: 20%;
+    margin-top: 3%;
+    grid-template-areas: 
+    "imagen texto";
+    grid-template-rows: 300px;
+    grid-template-columns: 40% 43%;
+}
+
+.im-grid{
+    @include variables.img-card(imagen);
+}
+.text-grid{
+    grid-area: texto;
+    font-size: 125%;
+    text-align: justify;
+    margin-top: 0%;
+    margin-left:2%;    
+}
+
