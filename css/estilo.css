@@ -1,5 +1,27 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@1,600&display=swap");
+.fade-in-fwd, .card3, .card2 {
+  animation: fade-in-fwd 1s cubic-bezier(0.39, 0.575, 0.565, 1) 2s both;
+}
+
+@keyframes fade-in-fwd {
+  0% {
+    transform: translateZ(-80px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateZ(0);
+    opacity: 1;
+  }
+}
+.card2 {
+  animation-delay: 3s;
+}
+
+.card3 {
+  animation-delay: 4s;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -66,6 +88,20 @@ main p {
   margin-left: 2%;
 }
 
+.fade-in-fwd {
+  animation: fade-in-fwd 1s cubic-bezier(0.39, 0.575, 0.565, 1) 2s both;
+}
+
+@keyframes fade-in-fwd {
+  0% {
+    transform: translateZ(-80px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateZ(0);
+    opacity: 1;
+  }
+}
 /*slogan*/
 .slogan {
   display: flex;
@@ -277,6 +313,8 @@ main p {
 
 .marg-top {
   margin-top: 3%;
+  margin-right: 0;
+  margin-left: 0;
 }
 
 /*contacto*/

@@ -12,3 +12,8 @@
 }
 $fondo: #533123;
 $titulo:#f2dd6c;
+.fade-in-fwd{animation:fade-in-fwd 1s cubic-bezier(.39,.575,.565,1.000) 2s both}
+@keyframes fade-in-fwd{0%{transform:translateZ(-80px);opacity:0}100%{transform:translateZ(0);opacity:1}}
+.card2{
+    @extend .fade-in-fwd; animation-delay: 3s;}
+.card3{@extend .fade-in-fwd; animation-delay: 4s;}

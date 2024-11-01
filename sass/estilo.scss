@@ -1,6 +1,7 @@
 @use "genericas";
 @use "variables";
 
+
 /*slogan*/
 .slogan{
     display: flex;
@@ -198,7 +199,10 @@
 }
 .marg-top{
     margin-top: 3%;
+    margin-right: 0;
+    margin-left: 0;
 }
+
 /*contacto*/
 .formulario {
     display: flex;

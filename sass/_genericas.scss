@@ -60,4 +60,5 @@ main{
     margin-top: 0%;
     margin-left:2%;    
 }
-
+.fade-in-fwd{animation:fade-in-fwd 1s cubic-bezier(.39,.575,.565,1.000) 2s both}
+@keyframes fade-in-fwd{0%{transform:translateZ(-80px);opacity:0}100%{transform:translateZ(0);opacity:1}}
