@@ -379,3 +379,93 @@ footer{
     }
 
 }
+@media (min-width: 501px) and (max-width: 800px){
+    .sl1, .sl2{        
+        font-size: 140%;
+    }
+    .lg{
+     width: 20%;
+    }
+    .p-plan{
+        font-size: 130%;
+    }
+    .text-grid{
+        font-size: 90%;
+    }
+    /*index*/
+    .index-grid{
+        margin-left: 5%;
+    }
+    .card-index{
+        h3{font-size: 130%;}
+        p{font-size: 90%;}
+    }
+    .card-index{
+        grid-template-columns: 30% 90%;
+    }
+    .quien{
+        img{
+            height: 90%;
+            margin-top: 30%;
+        }
+    }
+    .obj{
+        margin-top: 10%;
+        img{height: 72%;}
+    }
+    .card-links{
+        h3{font-size: 110%;}
+        grid-template-rows: auto 200px;
+        img{height: 90%;}       
+    }
+    .links{
+        grid-template-rows: 213px;
+    }
+    /*intro*/
+    .intro{
+        margin-left: 5%;
+        grid-template-columns: 30% 65%;
+        grid-template-rows: 315px;
+        p{font-size: 110%;}
+        img{height: 100%;}
+    }
+    .im-grid{height: 80%;}
+    /*plan de inversion*/
+    .plan-grid{
+        width: 96%;
+        margin-left: 2%;
+        grid-template-areas: 
+        "enc1 enc2"
+        "enc3 enc4"
+        "enc5 vacio";
+        grid-template-columns: repeat(2, 1fr);
+        
+    }
+    /*elaboracion*/
+    .card-elab{
+        h3{font-size: 160%;}
+    }
+    /*Plan inversion*/
+    .elab{
+        width: 98%;        
+    }
+    .card-elab{
+        grid-template-rows: 310px;
+        h3{font-size: 130%;}
+        p{margin-top: 7%;}
+    }
+    .Planresp{margin-top: 40%;}
+    /*contacto*/
+    form{max-width: 72%;}
+    /*footer*/
+    footer a img{
+        width: 100%;
+        margin-top: 50%;
+    }
+    .insta{
+        width: 77%;
+        margin-top: 61%;
+    }
+    
+
+}
