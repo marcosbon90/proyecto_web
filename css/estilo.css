@@ -537,6 +537,9 @@ footer img {
   .card-elab h3 {
     font-size: 160%;
   }
+  .card-elab p {
+    font-size: 110%;
+  }
   /*Plan inversion*/
   .elab {
     width: 98%;
