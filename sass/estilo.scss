@@ -439,7 +439,10 @@ footer{
         "enc3 enc4"
         "enc5 vacio";
         grid-template-columns: repeat(2, 1fr);
-        
+        margin-top: 8%;
+    }
+    .resp-p{
+        margin-top: 16%;
     }
     /*elaboracion*/
     .card-elab{

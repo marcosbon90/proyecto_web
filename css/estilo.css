@@ -528,6 +528,10 @@ footer img {
     margin-left: 2%;
     grid-template-areas: "enc1 enc2" "enc3 enc4" "enc5 vacio";
     grid-template-columns: repeat(2, 1fr);
+    margin-top: 8%;
+  }
+  .resp-p {
+    margin-top: 16%;
   }
   /*elaboracion*/
   .card-elab h3 {
